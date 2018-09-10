@@ -1,0 +1,79 @@
+// 背景图片地址和大小
+.bis(@url) { 
+	background-image: url(@url);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+// 定位全屏
+.allcover{
+	position:absolute;
+	top:0;
+	right:0;
+}
+// transform上下左右居中
+.ctt {  
+	position: absolute;
+	top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+// 定位上下左右居中
+.ctp(@width, @height) {  
+	position: absolute;
+	top: 50%;
+  left: 50%;
+  margin-top: -@height/2;
+  margin-left: -@width/2;
+}
+// 定位上下居中
+.tb {  
+	position: absolute;
+	top: 50%;
+  transform: translateY(-50%);
+}
+// 定位左右居中
+.lr {  
+	position: absolute;
+	left: 50%;
+  transform: translateX(-50%);
+}
+.lrtb {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+	
+// 宽高
+.wh(@width, @height){
+	width: @width;
+	height: @height;
+}
+// 字体大小、行高
+.ft(@size, @line-height) {  
+	font-size: @size;
+	line-height:@line-height;
+}
+// 字体大小、颜色
+.sc(@size, @color){
+	font-size: @size;
+	color: @color;
+}
+
+// 字体大小、行高、颜色
+.ftc(@size, @line-height, @color){
+	font-size: @size;
+	color: @color;
+	line-height:@line-height;
+}
+// flex 布局和 子元素 对其方式
+.fj(@type: space-between){
+	display: flex;
+	justify-content: @type;
+}
+
+.border(@width, @style, @color) {
+  border-width: @width;
+  border-style: @style;
+  border-color: @color;
+}
